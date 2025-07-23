@@ -1,0 +1,7 @@
+DROP FUNCTION IF EXISTS TO_DATE;
+DELIMITER $$
+CREATE FUNCTION TO_DATE(record_date CHAR(10)) RETURNS VARCHAR(8)
+BEGIN
+  RETURN concat(right(record_date,4),left(record_date,2),SUBSTRING(record_date, 4,2));
+END$$
+DELIMITER ;

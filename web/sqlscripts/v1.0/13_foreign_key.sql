@@ -1,0 +1,3 @@
+ALTER TABLE was_card_details_history ADD CONSTRAINT fk_card_number FOREIGN KEY (card_number) REFERENCES was_card_details(card_number);
+ALTER TABLE was_account_balance_details ADD CONSTRAINT fk_account_number FOREIGN KEY (account_number) REFERENCES was_customer_account(account_number);
+ALTER TABLE was_card_transaction_details ADD CONSTRAINT fk_card_number_details FOREIGN KEY (card_number) REFERENCES was_card_details(card_number);

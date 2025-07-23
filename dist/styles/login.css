@@ -1,0 +1,109 @@
+body {
+    color: #888888;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:14px;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+input[type="text"],input[type="password"] {
+  width:200px;
+  background:#fff;
+  margin:4px;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family:'Open Sans',sans-serif;
+  font-size:14px;
+  color:#555;
+   /* css 3 */
+ border-radius:5px;
+ /* mozilla */
+ -moz-border-radius:5px;
+ /* webkit */
+ -webkit-border-radius:5px;
+}
+
+
+input[type="submit"]{
+  background:#3399cc;
+  border:0;
+  margin:5px;
+  padding:5px;
+  font-size:14px;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+
+#login{
+  width:400px;
+  margin:0 auto;
+  margin-top:150px;
+  margin-bottom:2%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+
+#login h1{
+  background:#3399cc;
+  padding:20px 0;
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#fff;
+}
+
+#login input{
+  font-size:120%;
+}
+
+#login form{
+  border:#eee 1px solid;
+  padding:6% 4%;
+}
+
+#login input[type="text"],#login input[type="password"]{
+  width:89%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-size:95%;
+  color:#555;
+     /* css 3 */
+ border-radius:5px;
+ /* mozilla */
+ -moz-border-radius:5px;
+ /* webkit */
+ -webkit-border-radius:5px;
+}
+
+#login input[type="submit"]{
+  width:97%;
+  background:#3399cc;
+  border:0;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+#login input[type="submit"]:hover{
+  background:#2288bb;
+}
+
+#errLog{
+    color:red;
+    font-size:12px;
+    padding: 10px;
+    padding-top: 0px;
+    text-align:center;
+}

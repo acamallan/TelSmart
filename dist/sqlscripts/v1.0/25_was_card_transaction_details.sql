@@ -1,0 +1,1 @@
+ALTER TABLE was_card_transaction_details CHANGE transaction_reference transaction_id varchar(10);

@@ -1,0 +1,1 @@
+alter table was_product_sales_invoice_header add card_number varchar(16) default '';

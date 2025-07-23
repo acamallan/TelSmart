@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    color: black;
+}
+
+p{
+    margin:5px;
+}
+
+.reportHeader{
+    border: 1px solid #ddd;
+}
+
+/*table*/
+.component table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+	
+}
+.component td, th {
+    padding:3px;
+    text-align: left;
+    border:.5px #ddd solid;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+.component th {
+    background-color: #3399cc;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+.component tbody th {
+	background-color: #3399cc;
+}

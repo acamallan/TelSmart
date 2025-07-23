@@ -1,0 +1,1 @@
+ALTER TABLE was_hotel_payment add transaction_id varchar(10) default '';

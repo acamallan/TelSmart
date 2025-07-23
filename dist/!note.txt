@@ -1,0 +1,33 @@
+CHART OF ACCOUNTS ORGANIZATION
+Recommends that you organize your accounts by main account number. Here is an
+example of one possible method of numbering accounts:
+
+Asset Accounts 1000 to 1999
+Liability Accounts 2000 to 2999
+Owner’s Equity
+Accounts
+3000 to 3999
+Revenue Accounts 4000 to 4999
+Cost of Sales
+Accounts
+5000 to 5999
+Expense Accounts 6000 to 6999
+
+
+SOURCE:
+http://www.pass-port.com/docs/general_ledger.pdf
+http://www.accountingcoach.com/balance-sheet/explanation
+http://www.accountingcoach.com/balance-sheet/explanation/2
+http://www.accountingcoach.com/balance-sheet/explanation/3
+
+Loan
+https://www.youtube.com/watch?v=KnK7mycTvL4
+
+Precompile JSP codes
+https://tomcat.apache.org/tomcat-7.0-doc/jasper-howto.html
+
+Javacript Obfuscator
+http://closure-compiler.appspot.com/
+
+icons
+http://flaticons.net/

@@ -1,0 +1,73 @@
+<%@include file="../header.jsp"%>
+<%@include file="../functions/record_function.jsp"%>
+
+<%
+/* No need to put String as variables already initialize */
+table = "was_product";
+fields = "product_id as rowid, product_id, product_name, category, supplier, cost_price, selling_price, note";
+where = "product_id";
+/*used in Add New*/
+enableFields = "product_name, category, supplier, cost_price, selling_price, note";
+/*used in Amend*/
+amendableFields = "category, product_name, supplier, cost_price, selling_price, note";
+requiredFields = "product_name, category, supplier, cost_price, selling_price";
+/*End here*/
+
+String title = "Product Items";
+%>
+<%@include file="../common/sidefind.jsp"%>
+
+<fieldset style="width:700px; margin: auto; margin-top: 50px; border: 1px solid #ddd; background-color: #f6f6f6; padding:20px;"  >
+    <legend style="font-size: 14px; font-weight: bold; padding:0 10px"><%= title %></legend>
+        <form action="product_items.php" method="post" name="UpdateEmployee" id="UpdateEmployee" autocomplete="off">
+            <div class="input-w" style="margin-left: 100px; margin-top: 0px;">
+                <label for="#your-input" id="lb_product_id">Product ID</label>
+                <input type="text" name="product_id" id="product_id" required  style="width:80px;" onkeypress='validate(event);' disabled>
+            </div>
+            <div class="input-w" style="margin-left: 78px;">
+                <label for="#your-input" id="lb_product_name">Product Name</label>
+                <input type="text" name="product_name" id="product_name"  required >
+            </div>
+            <div class="input-w" style="margin-left: 108px;">
+                <label for="#your-input" id="lb_category">Category</label>
+                <select name="category" id="category">
+                    <option></option>
+                    <%
+                    Connection conn = DBConnection();
+                    PreparedStatement qrySelectCategory = conn.prepareStatement("SELECT product_category_id, product_category_name FROM wasi_cs_product_category order by product_category_name");
+                    ResultSet strQueryCategory = qrySelectCategory.executeQuery();
+                    while(strQueryCategory.next()){
+                    %>
+                    <option value="<%= strQueryCategory.getString("product_category_id") %>" ><%= strQueryCategory.getString("product_category_name") %></option>
+                     <%}%>
+		</select>
+            </div>
+            <div class="input-w" style="margin-left: 110px;">
+                <label for="#your-input" id="lb_supplier">Supplier</label>
+                <select name="supplier" id="supplier">
+                    <option></option>
+                    <%
+                    PreparedStatement qrySelectSupplier = conn.prepareStatement("SELECT supplier_id, company_name FROM was_supplier order by company_name");
+                    ResultSet qryQuerySupplier = qrySelectSupplier.executeQuery();
+                    while(qryQuerySupplier.next()){
+                    %>
+                    <option value="<%= qryQuerySupplier.getString("supplier_id") %>" ><%= qryQuerySupplier.getString("company_name") %></option>
+                    <%}%>
+		</select>
+            </div>
+            <div class="input-w" style="margin-left: 100px;">
+                <label for="#your-input" id="lb_cost_price">Cost Price</label>
+                <input type="text" name="cost_price" id="cost_price"  required  onkeypress='validate(event);' onblur="formatDecimal(this);">
+            </div>
+            <div class="input-w" style="margin-left: 88px;">
+                <label for="#your-input" id="lb_selling_price">Selling Price</label>
+                <input type="text" name="selling_price" id="selling_price"  required  onkeypress='validate(event);' onblur="formatDecimal(this);">
+            </div>
+                <div class="input-w" style="margin-left: 122px;">
+                <label for="#your-input" id="lb_note">Notes</label>
+                <input type="text" name="note" id="note"  required >
+            </div>
+	</form>
+</fieldset>
+<%@include file="product_items_jsfunction.jsp"%>
+<%@include file="../footer.jsp"%>

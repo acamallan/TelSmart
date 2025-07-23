@@ -1,0 +1,68 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Tree View</title>
+<link rel="stylesheet" type="text/css" href="css/multi/tree.css">
+<script type="text/javascript" src="build/yahoo.js" ></script>
+<script type="text/javascript" src="build/event.js"></script>
+<script type="text/javascript" src="build/treeview.js" ></script>
+<script type="text/javascript" src="build/jktreeview.js" ></script>
+
+
+<!-- Below is Style sheet for demos. Removed if desired -->
+<style type="text/css">
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<div id="tree2" style="padding: 10px; width:220px;"></div>
+
+
+
+<script type="text/javascript">
+
+<!-- TreeView Demo 1 //-->
+var pinetree=new jktreeview("tree2")
+var branch3=pinetree.addItem("References") //A TREE BRANCH WITH NO URL FOR ITSELF
+	pinetree.addItem("JavaScript Reference", branch3, "http://www.javascriptkit.com/jsref/") //Add this item to branch3
+	pinetree.addItem("DOM Reference", branch3, "http://www.javascriptkit.com/domref/") //Add this item to branch3
+	pinetree.addItem("CSS Reference", branch3, "http://www.javascriptkit.com/dhtmltutors/cssreference.shtml") //Add this item to branch3
+var branch3=pinetree.addItem("References") //A TREE BRANCH WITH NO URL FOR ITSELF
+	pinetree.addItem("JavaScript Reference", branch3, "http://www.javascriptkit.com/jsref/") //Add this item to branch3
+	pinetree.addItem("DOM Reference", branch3, "http://www.javascriptkit.com/domref/") //Add this item to branch3
+	pinetree.addItem("CSS Reference", branch3, "http://www.javascriptkit.com/dhtmltutors/cssreference.shtml") //Add this item to branch3
+var branch3=pinetree.addItem("References") //A TREE BRANCH WITH NO URL FOR ITSELF
+	var branch3_4=pinetree.addItem("CSS Layouts", branch3, "http://www.dynamicdrive.com/style/layouts/") //A TREE BRANCH WITH URL FOR ITSELF!
+		pinetree.addItem("Two Columns", branch3_4, "http://www.dynamicdrive.com/style/layouts/category/C9/") //Add this item to branch2_4
+		pinetree.addItem("Tree Columns", branch3_4, "http://www.dynamicdrive.com/style/layouts/category/C10/") //Add this item to branch2_4
+	pinetree.addItem("JavaScript Reference", branch3, "http://www.javascriptkit.com/jsref/") //Add this item to branch3
+	pinetree.addItem("DOM Reference", branch3, "http://www.javascriptkit.com/domref/") //Add this item to branch3
+	pinetree.addItem("CSS Reference", branch3, "http://www.javascriptkit.com/dhtmltutors/cssreference.shtml") //Add this item to branch3
+	
+var branch3=pinetree.addItem("References") //A TREE BRANCH WITH NO URL FOR ITSELF
+	pinetree.addItem("JavaScript Reference", branch3, "http://www.javascriptkit.com/jsref/") //Add this item to branch3
+	pinetree.addItem("DOM Reference", branch3, "http://www.javascriptkit.com/domref/") //Add this item to branch3
+	pinetree.addItem("CSS Reference", branch3, "http://www.javascriptkit.com/dhtmltutors/cssreference.shtml") //Add this item to branch3
+
+	
+var branch3=pinetree.addItem("References") //A TREE BRANCH WITH NO URL FOR ITSELF
+	pinetree.addItem("JavaScript Reference", branch3, "http://www.javascriptkit.com/jsref/") //Add this item to branch3
+	pinetree.addItem("DOM Reference", branch3, "http://www.javascriptkit.com/domref/") //Add this item to branch3
+	pinetree.addItem("CSS Reference", branch3, "http://www.javascriptkit.com/dhtmltutors/cssreference.shtml") //Add this item to branch3
+pinetree.addItem("JavaScript Tutorials", "", "http://www.javascriptkit.com/javatutors/")
+pinetree.addItem("DHTML Tutorials", "", "http://www.javascriptkit.com/dhtmltutors/")
+pinetree.addItem("Webmaster Tutorials", "", "http://www.javascriptkit.com/howto/")
+pinetree.treetop.draw(); //REQUIRED LINE: Initalize tree
+
+
+
+</script>
+
+  </body>
+</html>
+ 

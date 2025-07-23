@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app >
+    <display-name>TelSmart</display-name>
+    
+    <context-param>
+        <param-name>hostname</param-name>
+	<param-value>localhost</param-value>
+    </context-param>
+    <context-param>
+        <param-name>port</param-name>
+	<param-value>3306</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbname</param-name>
+	<param-value>waya_t</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+	<param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+	<param-value>D8h1P+IDRKW9+hF6MyhXWg==</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4j_location</param-name>
+	<param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
+    <context-param>
+        <param-name>baseURL</param-name>
+	<!--<param-value>http://192.168.22.6:8080/WASystem/</param-value>-->
+        <param-value>http://localhost:8080/TelSmart/</param-value>
+    </context-param>
+    
+    <!-- Reports -->
+    <context-param>
+        <param-name>ReportPath</param-name>
+	<param-value>C:\Users\acamallan\Documents\NetBeansProjects\TelSmart\web\Reports\</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ReportPathGenerated</param-name>
+	<param-value>C:\ReportsGenerated\</param-value>
+    </context-param>
+    
+    <!-- Scheduler -->
+    <context-param>
+        <param-name>CronScheduler</param-name>
+	<param-value>0 0 0 * * ?</param-value>
+    </context-param>
+    
+    <session-config>    
+        <session-timeout>100</session-timeout>
+    </session-config>
+    
+    <error-page>
+        <!-- Uncaught exception -->
+        <error-code>5001</error-code>
+        <location>/500_error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Page not found -->
+        <error-code>404</error-code>
+        <location>/404_error.jsp</location>
+    </error-page>
+    <!--
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <description>For Report 1</description>
+        <servlet-name>JasperServlet</servlet-name>
+        <servlet-class>servlet.JasperServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JasperServlet</servlet-name>
+        <url-pattern>/JasperServlet</url-pattern>
+    </servlet-mapping>  -->
+    
+   <listener>
+        <listener-class>wAYA.SchedulerListener</listener-class>
+    </listener>
+    
+</web-app>

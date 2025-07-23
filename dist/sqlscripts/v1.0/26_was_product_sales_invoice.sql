@@ -1,0 +1,1 @@
+alter table was_product_sales_invoice add record_time varchar(8) default '';

@@ -1,0 +1,1 @@
+update was_cs_card_status set card_status ='Available' where was_id = '103';

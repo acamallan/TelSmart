@@ -1,0 +1,5 @@
+Please set your firefox browser:
+
+1.input "about:config " to your firefox address bar and enter;
+
+2.make sure your "dom.allow_scripts_to_close_windows" is true

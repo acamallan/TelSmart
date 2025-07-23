@@ -1,0 +1,1 @@
+insert into was_cs_hotel_room_status(was_id, room_status) values('110', 'Reserved');

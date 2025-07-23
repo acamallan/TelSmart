@@ -1,0 +1,1 @@
+alter table was_product_receive add gl_code varchar(4) not null;

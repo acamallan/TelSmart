@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link class="include" rel="stylesheet" type="text/css" href="style/jquery.jqplot.min.css" />
+<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+<script class="include" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
+</head>
+<body>
+<div class="example-plot" id="chart2">
+<!-- Example scripts go here -->
+
+    <style type="text/css">
+      .jqplot-point-label {white-space: nowrap;}
+/*    .jqplot-yaxis-label {font-size: 14pt;}*/
+/*    .jqplot-yaxis-tick {font-size: 7pt;}*/
+
+    div.jqplot-target {
+        height: 400px;
+        width: 750px;
+    }
+    </style>
+<script class="code" type="text/javascript" language="javascript">
+$(document).ready(function(){   
+    var line2 = [['1/1/2014', 0], ['2/1/2014', 5000], ['3/1/2014', 10000], ['4/1/2014', 12000], ['5/1/2014', 18000], ['6/1/2014', 25000], ['7/1/2014', 35000], ['8/1/2014', 45000], ['9/1/2014', 70000], ['10/1/2014', 90000], ['11/1/2014', 110000], ['12/1/2014', 150000]];
+
+    var plot2 = $.jqplot('chart2', [line2], {
+      axes: {
+        xaxis: {
+          renderer: $.jqplot.DateAxisRenderer,
+          label: '',
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+          tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+          tickOptions: {
+              // labelPosition: 'middle',
+			  formatString: '%b/%Y',
+              angle: 20
+          }
+          
+        },
+        yaxis: {
+          
+          labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        }
+      }
+    });
+
+});
+</script>
+<!-- End example scripts -->
+
+<!-- Don't touch this! -->
+
+    <script class="include" type="text/javascript" src="script/jquery.jqplot.min.js"></script>
+    
+<!-- Additional plugins go here -->
+    <script class="include" type="text/javascript" src="script/jqplot.canvasTextRenderer.min.js"></script>
+    
+    <script class="include" type="text/javascript" src="script/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <script class="include" type="text/javascript" src="script/jqplot.dateAxisRenderer.min.js"></script>
+</body>
+</html>
